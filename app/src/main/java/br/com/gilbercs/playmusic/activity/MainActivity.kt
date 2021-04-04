@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
     ) {
         when(requestCode){
             REQUEST_CODE -> if (grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                //carregar musica
+                //carregar lista do dispositivo
                 carregarMusica()
             }else{
                 Toast.makeText(this, "Permisão Negada",Toast.LENGTH_SHORT).show()
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
            recyLista.adapter = adpMusica
         }//fim condicional I
     }//fim carregar musica
-
+//falta implementar ação de cliente no iten da list e executar
     //função play musica
     fun playMusica(uri: Uri) {
         if (mP==null){

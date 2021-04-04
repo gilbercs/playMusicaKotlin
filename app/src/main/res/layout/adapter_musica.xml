@@ -13,12 +13,20 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/size_adp_padding"
         android:divider="@color/black"
+        android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="10"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/texto_icone_musica"
+            app:srcCompat="@drawable/ic_musica_36" />
 
         <LinearLayout
             android:id="@+id/idLinearLayout_02"
