@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Tamanho da Fonte-->
+    <dimen name="size_texto_titulo">18sp</dimen>
+    <dimen name="size_texto_subtitulo">16sp</dimen>
+    <dimen name="size_texto_padrao">14sp</dimen>
+    <dimen name="size_texto_cometario">12sp</dimen>
+    <dimen name="size_texto_rodape">10sp</dimen>
+    <!--Tamanho Layout Margens-->
+    <dimen name="size_layout_margin">10sp</dimen>
+    <dimen name="size_layout_margin_esquerda">10sp</dimen>
+    <dimen name="size_layout_margin_direita">10sp</dimen>
+    <dimen name="size_layout_margin_superior">4sp</dimen>
+    <dimen name="size_layout_margin_inferior">14sp</dimen>
+    <!--Tamanho padding-->
+    <dimen name="size_padding">2sp</dimen>
+    <dimen name="size_padding_esquerda">10sp</dimen>
+    <dimen name="size_padding_direita">10sp</dimen>
+    <dimen name="size_padding_superior">3sp</dimen>
+    <dimen name="size_padding_inferior">6sp</dimen>
+    <!--dimens seekBar-->
+    <dimen name="size_seek_bar_altura">14sp</dimen>
+    <dimen name="size_seek_bar_largura">200sp</dimen>
+    <dimen name="size_seek_bar_layout_margin_bottom">5sp</dimen>
+    <dimen name="size_seek_bar_layout_margin_top">5sp</dimen>
+    <!--Tamanho padding-->
+    <dimen name="size_adp_padding">2sp</dimen>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Play Music</string>
+    <!--Texto do aplicativo-->
+    <string name="texto_nome_artista">Nome do Artista</string>
+    <string name="texto_nome_musica">Nome da Musica</string>
+    <!--Texto utilizado imagens-->
+    <string name="texto_play">Play</string>
+    <string name="texto_pause">Pause</string>
+    <string name="texto_voltar">Pause</string>
+    <string name="texto_next">Pause</string>
+</resources>
