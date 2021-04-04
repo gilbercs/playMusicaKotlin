@@ -1,2 +1,2 @@
-# media_player_kotlin
-Media Player para reproduzir áudio localmente
+## media player kotlin
+Media Player para reproduzir musica localmente de um dispositivo android
