@@ -1,92 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/custom"
-    tools:context=".activity.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRecyclearViewMusica"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/size_layout_margin"
-        android:padding="@dimen/size_padding"
-        app:layout_constraintBottom_toTopOf="@+id/idLinearLayoutMain_02"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/idLinearLayoutMain_02"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="@dimen/size_layout_margin_esquerda"
-        android:layout_marginLeft="@dimen/size_layout_margin_esquerda"
-        android:layout_marginTop="@dimen/size_layout_margin_superior"
-        android:layout_marginEnd="@dimen/size_layout_margin_direita"
-        android:layout_marginRight="@dimen/size_layout_margin_direita"
-        android:layout_marginBottom="@dimen/size_layout_margin_inferior"
-        android:background="@drawable/custom_adp"
-        android:orientation="vertical"
-        android:padding="@dimen/size_padding"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idRecyclearViewMusica">
+        android:layout_height="match_parent"
+        android:background="@drawable/custom"
+        tools:context=".activity.MainActivity">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idRecyclearViewMusica"
+            layout_constraintBottom_toTopOf="idid_linearlayout_player"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/size_layout_margin"
+            android:padding="@dimen/size_padding"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/recycler_musica"/>
 
-        <SeekBar
-            android:id="@+id/idSeekBarMain"
-            android:layout_width="@dimen/size_seek_bar_largura"
-            android:layout_height="match_parent"
-            android:layout_gravity="center" />
-
-        <LinearLayout
-            android:id="@+id/idLinearLayoutMain_03"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingLeft="40sp"
-            android:paddingRight="40sp">
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-            <ImageView
-                android:id="@+id/idImagenVoltar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:contentDescription="@string/texto_voltar"
-                app:srcCompat="@drawable/ic_skip_previous_36" />
+            <include
+                layout="@layout/recycler_player"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageView
-                android:id="@+id/idImagenPause"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:contentDescription="@string/texto_pause"
-                app:srcCompat="@drawable/ic_pause_36" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <ImageView
-                android:id="@+id/idImagenPlay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:contentDescription="@string/texto_play"
-                app:srcCompat="@drawable/ic_play_36" />
-
-            <ImageView
-                android:id="@+id/idImagenNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:contentDescription="@string/texto_next"
-                app:srcCompat="@drawable/ic_skip_next_36" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
