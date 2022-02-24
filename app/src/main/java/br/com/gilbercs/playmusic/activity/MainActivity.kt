@@ -1,56 +1,38 @@
 package br.com.gilbercs.playmusic.activity
 
-import android.content.pm.PackageManager
-import android.media.MediaPlayer
-import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.provider.MediaStore
 import android.view.LayoutInflater
-import android.widget.ImageView
-import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import br.com.gilbercs.playmusic.R
-import br.com.gilbercs.playmusic.adapter.AdapterMusica
 import br.com.gilbercs.playmusic.databinding.ActivityMainBinding
-import br.com.gilbercs.playmusic.databinding.RecyclerPlayerBinding
-import br.com.gilbercs.playmusic.model.ModelMusica
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(LayoutInflater.from(this))}
-    private val bindingPlayer by lazy { RecyclerPlayerBinding.inflate(LayoutInflater.from(this))}
-    private lateinit var viewModel: MainViewModel
+/*    private val bindingPlayer by lazy { RecyclerPlayerBinding.inflate(LayoutInflater.from(this))}
 
     var listaMusica = ArrayList<ModelMusica>()
     lateinit var recyLista: RecyclerView
     lateinit var seekBarMp: SeekBar
 
-    val REQUEST_CODE = 123
+    val REQUEST_CODE = 123*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        inicializarCamponentes()
-        checarPermissao()
+        /*inicializarCamponentes()
+        checarPermissao()*/
 
         //carregarMusica()
         //iniciarSeebar()
     }
 
-    fun inicializarCamponentes() {
+/*    fun inicializarCamponentes() {
         seekBarMp = bindingPlayer.idSeekBarMain  as SeekBar
         recyLista = binding.idRecyclearViewMusica  as RecyclerView
-    }
+    }*/
 
     //chegar permisão ao dispositivo
-    private fun checarPermissao() {
+    /*private fun checarPermissao() {
         if (Build.VERSION.SDK_INT >= 23) {
             if ((ActivityCompat.checkSelfPermission(this,
                     android.Manifest.permission.READ_EXTERNAL_STORAGE)) != PackageManager.PERMISSION_GRANTED
@@ -63,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                 carregarMusica()
             }
         }
-    }
+    }*/
 
     //verificar permissão
     /*override fun onRequestPermissionsResult(
@@ -94,7 +76,10 @@ class MainActivity : AppCompatActivity() {
     */
 
 
-    fun carregarMusica() {
+
+
+
+    /*fun carregarMusica() {
         val projection = arrayOf(
             MediaStore.Audio.Media.DISPLAY_NAME,
             MediaStore.Audio.Media.ARTIST,
@@ -124,7 +109,7 @@ class MainActivity : AppCompatActivity() {
         val adpMusica = AdapterMusica(listaMusica, this)
         recyLista.layoutManager = LinearLayoutManager(this)
         recyLista.adapter = adpMusica
-    }
+    }*/
 
 
 
@@ -197,27 +182,6 @@ class MainActivity : AppCompatActivity() {
             }
         })*//*
     }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

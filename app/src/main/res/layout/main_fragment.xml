@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+        <variable
+            name="mainViewModel"
+            type="br.com.gilbercs.playmusic.activity.mainFragment.MainViewModel" />
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.mainFragment.MainFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom"
+            tools:context=".activity.MainActivity">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/idRecyclearViewMusica"
+                layout_constraintBottom_toTopOf="idid_linearlayout_player"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/size_layout_margin"
+                android:padding="@dimen/size_padding"
+                app:layout_constraintBottom_toTopOf="@+id/id_linearlayout_player"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/recycler_musica" />
+
+            <LinearLayout
+                android:id="@+id/id_linearlayout_player"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/size_layout_margin_esquerda"
+                android:layout_marginLeft="@dimen/size_layout_margin_esquerda"
+                android:layout_marginEnd="@dimen/size_layout_margin_direita"
+                android:layout_marginRight="@dimen/size_layout_margin_direita"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/custom_adp"
+                android:orientation="vertical"
+                android:padding="@dimen/size_padding"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <SeekBar
+                    android:id="@+id/seekBarMediaPlayer"
+                    android:layout_width="@dimen/size_seek_bar_largura"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/idLinearLayoutMain_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="40sp"
+                    android:paddingRight="40sp">
+
+                    <ImageView
+                        android:id="@+id/bt_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/texto_voltar"
+                        app:srcCompat="@drawable/ic_skip_previous_36" />
+
+                    <ImageView
+                        android:id="@+id/bt_pause"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="@string/texto_pause"
+                        app:srcCompat="@drawable/ic_pause_36" />
+
+                    <ImageView
+                        android:id="@+id/bt_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:clickable="true"
+                        android:contentDescription="@string/texto_play"
+                        android:focusable="true"
+                        app:srcCompat="@drawable/ic_play_36" />
+
+                    <ImageView
+                        android:id="@+id/bt_advance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/texto_next"
+                        app:srcCompat="@drawable/ic_skip_next_36" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+
+
+
+
+
+
+
+</layout>

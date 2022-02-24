@@ -4,29 +4,33 @@ import android.content.Context
 import android.media.MediaPlayer
 import android.net.Uri
 import android.widget.ImageView
+import br.com.gilbercs.playmusic.activity.mainFragment.MainViewModel
 
-class PlayMusic(val context: Context) {
-    var mediaPlayer: MediaPlayer? = null
+class PlayMusic(val context: Context, mediaPlayer: MediaPlayer?) {
+    private var viewModel = MainViewModel()
+    private var mediaPlayer = mediaPlayer
+    //var mediaPlayer: MediaPlayer? = null
     var imgPlay: ImageView? = null
     var imgPause: ImageView? = null
     var imgAnterior: ImageView? = null
     var imgProxima: ImageView? = null
 
     fun play(uri: Uri) {
-        if (mediaPlayer == null) {
-            mediaPlayer = MediaPlayer.create(context, uri)
-            //SeekBar.iniciar()
-            mediaPlayer?.start()
-        }else if (mediaPlayer != null) {
-            mediaPlayer?.stop()
-            mediaPlayer?.reset()
-            mediaPlayer?.release()
-            mediaPlayer = null
-            mediaPlayer = MediaPlayer.create(context, uri)
-            //iniciarSeebar()
-            mediaPlayer?.start()
-            //imgPlay!!.setImageResource(R.drawable.ic_pause_36)
-        }
+        //if (mediaPlayer == null) {
+        //mediaPlayer = MediaPlayer.create(context, uri)
+        //SeekBar.iniciar()
+        //mediaPlayer?.start()
+        //Log.e("MediaPlayer", "Musica Iniciada!")
+        //} else {
+        mediaPlayer?.stop()
+        mediaPlayer?.reset()
+        mediaPlayer?.release()
+        mediaPlayer = MediaPlayer.create(context, uri)
+        //iniciarSeebar()
+        mediaPlayer?.start()
+        //imgPlay!!.setImageResource(R.drawable.ic_pause_36)*/
+        //}
+        
     }
 
     fun pause() {
